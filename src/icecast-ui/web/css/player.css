@@ -1,0 +1,88 @@
+button {
+	border: none;
+	outline: none;
+}
+.mejs-controls .mejs-button button {
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-indent: -9999px;
+}
+
+.mejs-controls .mejs-play button,
+.mejs-controls .mejs-pause button {
+	width: 28px;
+	height: 28px;
+	top: 5px;
+	left: 13px;
+	background: transparent url(../img/play.png) 0 0;
+	background-size: cover;
+	background-position: top;
+	z-index: 9999;
+}
+
+.mejs-controls .mejs-pause button { background: transparent url(../img/pause.png) no-repeat 0 0;}
+
+.mejs-controls .mejs-mute button,
+.mejs-controls .mejs-unmute button {
+	width: 28px;
+	height: 28px;
+	top: 6px;
+	left: 60px;
+	background: url(../img/volume.png) 0 0;
+	background-size: cover;
+	background-position: top;
+}
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle {
+	position: absolute;
+	display: block;
+	width: 17px;
+	height: 17px;
+	top: -4px;
+	left: -2px;
+	background: white;
+	border-radius: 50%;
+}
+.mejs-controls div.mejs-horizontal-volume-slider {
+	position: absolute;
+	top: 15px;
+	left: 105px;
+	cursor: pointer;
+}
+
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+	width: 280px;
+	height: 10px;
+	background: rgba(0,0,0,.2);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+@media(min-width:0px) and (max-width:320px) {
+	.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+		display: none;
+	}
+}
+@media(min-width:321px) and (max-width:480px) {
+	.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+		display: none;
+	}
+}
+@media(min-width:481px) and (max-width:768px) {
+	.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+		display: none;
+	}
+}
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+	position: absolute;
+	width: 0;
+	height: 10px;
+	top: 0;
+	left: 0;
+	background: #77b3df;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}

@@ -1,0 +1,28 @@
+variables:
+  IMAGE_NAME: "$CI_REGISTRY_IMAGE/$APP_PART-$CI_COMMIT_REF_SLUG"
+  GIT_SUBMODULE_STRATEGY: recursive
+
+image: docker:latest
+services:
+  - docker:dind
+
+stages:
+  - build
+
+.base_build: &base_build
+  stage: build
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker pull $IMAGE_NAME:latest || true
+    - docker build --cache-from $IMAGE_NAME:latest -t $IMAGE_NAME:$CI_COMMIT_SHA -t $IMAGE_NAME:latest -f ./docker/$APP_PART/Dockerfile .
+    - docker push $IMAGE_NAME:$CI_COMMIT_SHA
+    - docker push $IMAGE_NAME:latest
+  tags:
+    - isp-docker
+
+build_image:
+  stage: build
+  <<: *base_build
+  variables:
+    APP_PART: icecast-kh

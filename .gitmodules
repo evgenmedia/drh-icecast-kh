@@ -1,0 +1,3 @@
+[submodule "src/icecast-kh"]
+	path = src/icecast-kh
+	url = https://github.com/karlheyes/icecast-kh.git

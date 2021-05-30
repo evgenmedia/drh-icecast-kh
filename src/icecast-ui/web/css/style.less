@@ -1,0 +1,466 @@
+/*==================ШРИФТЫ===================*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+.light {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+.med {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+.s-bold {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+}
+.bold {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+}
+/*==================ШРИФТЫ===================*/
+
+/*==================ШРИФТЫ===================*/
+
+/*==================ШРИФТЫ===================*/
+
+/*==================ШРИФТЫ===================*/
+body {
+	background: #1a4e7c;
+	overflow-x: hidden;
+}
+
+
+header {
+	margin-top: 23px;
+	img {
+		display: inline-block;
+		float: left;
+		margin-right: 15px;
+	}
+	h2 {
+		margin-bottom: 0;
+		margin-top: 0;
+		margin-right: -11px;
+		color: #fff;
+		.med;
+		@media(min-width:0px) and (max-width:320px) {
+			font-size: 1.2em;
+			margin-top: 15px;
+		}
+		@media(min-width:321px) and (max-width:480px) {
+			font-size: 1.5em;
+			margin-top: 10px;
+		}
+		@media(min-width:481px) and (max-width:768px) {
+			font-size: 	1.5em;
+			margin-top: 10px;
+		}
+	}
+	p {
+		color: #81b6e5;
+		.med;
+		@media(min-width:0px) and (max-width:320px) {
+			font-size: .6em;
+		}
+		@media(min-width:321px) and (max-width:480px) {
+			font-size: .8em;
+		}
+		@media(min-width:481px) and (max-width:768px) {
+			font-size: .8em;
+		}
+	}
+	.nav {
+		margin-top: 15px;
+		text-align: right;
+		li {
+			margin-right: 0;
+			margin-left: -7px;
+			&:last-child {
+				margin-right: 	0;
+			}
+			&:after {
+				content: '';
+				display: inline-block;
+				width: 2px;
+				height: 28px;
+				background: #0c3559;
+				vertical-align: middle;
+				margin-left: 5px;
+			}
+			&:last-child::after {
+				display: none;
+			}
+			a {
+				display: inline-block;
+				padding: 10px 5px;
+				border-radius: 5px;
+				color: #fff;
+				text-decoration: none;
+				transition: .3s;
+				@media(min-width:481px) and (max-width:768px) {
+					font-size: 	.8em;
+				}
+				&:hover {
+					background: #568cbc;
+				}
+			}
+		}
+	}
+	.dropdown {
+		a {
+			color:  #568cbc;
+			font-size: 1.8em;
+		}
+		ul {
+			li {
+				margin: 0;
+				&:after {
+					display: none;
+				}
+				a {
+					color: #568cbc;
+					font-size: 1em;
+					&:active {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+.main {
+	margin-top: 35px;
+	background: #fff;
+	border-radius: 	5px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,.4);
+	.section_header {
+		padding-right: 44px;
+		padding-left: 44px;
+		h1 {
+			color: #184771;
+			.light;
+			@media(min-width:0px) and (max-width:320px) {
+				font-size: 1.5em;
+			}
+		}
+		p {
+			.s-bold;
+			color: #184771;
+			&.border-bottom {
+			border-bottom: 1px solid #f0f0f0;
+			padding-bottom: 15px;
+			}
+			@media(min-width:0px) and (max-width:320px) {
+				font-size: .8em;
+			}
+		}
+	}
+	.info_block {
+		width: 90%;
+		margin-bottom: 	15px;
+		.player_wrapper {
+			width: 493px;
+			marquee {
+				margin-top: 10px;
+				.med;
+				text-transform: uppercase;
+				color: #77b3df;
+				width: 500px;
+				margin-left: 400px;
+				@media(min-width:0px) and (max-width:320px) {
+					width: 60%;
+					margin-left: 100px;
+				}
+				@media(min-width:321px) and (max-width:480px) {
+					width: 60%;
+					margin-left: 100px;
+				}
+				@media(min-width:481px) and (max-width:768px) {
+					width: 60%;
+					margin-left: 100px;
+				}
+			}
+			@media(min-width:0px) and (max-width:320px) {
+				width: 100%;
+			}
+			@media(min-width:321px) and (max-width:480px) {
+				width: 100%;
+			}
+			@media(min-width:481px) and (max-width:768px) {
+				width: 100%;
+			}
+		}
+		.block_header {
+			border-top: 1px solid #f0f0f0;
+			border-right: 1px solid #f0f0f0;
+			border-left: 1px solid #f0f0f0;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			background: #ebf2f7;
+			i {
+				font-style: normal;
+				display: inline-block;
+				height: 58px;
+				color: #568cbc;
+				border-left: 1px solid #568cbc;
+				padding-left: 17px;
+				margin-right: 15px;
+				padding-top: 5px;
+				.med;
+				@media(min-width:0px) and (max-width:320px) {
+					font-size: 	.7em;
+					height: auto;
+				}
+			}
+			.headphones:before {
+				content: '';
+				display: block;
+				width: 24px;
+				height: 24px;
+				background: url(../img/headphones.png) no-repeat;
+				background-size: cover;
+				margin-left: auto;
+				margin-right: auto;
+				@media(min-width:0px) and (max-width:320px) {
+					width: 16px;
+					height: 16px;
+				}
+				@media(min-width:321px) and (max-width:480px) {
+					width: 16px;
+					height: 16px;
+				}
+			}
+			.file:before {
+				content: '';
+				display: block;
+				width: 24px;
+				height: 24px;
+				background: url(../img/file.png) no-repeat;
+				background-size: cover;
+				margin-left: auto;
+				margin-right: auto;
+				@media(min-width:0px) and (max-width:320px) {
+					width: 16px;
+					height: 16px;
+				}
+				@media(min-width:321px) and (max-width:480px) {
+					width: 16px;
+					height: 16px;
+				}
+			}
+			h2 {
+				.med;
+				color: #568cbc;
+				margin-top: 5px;
+				@media(min-width:0px) and (max-width:320px) {
+					font-size: .6em;
+					margin-top: 10px;
+				}
+				@media(min-width:321px) and (max-width:480px) {
+					font-size: .8em;
+					margin-top: 17px;
+				}
+				@media(min-width:481px) and (max-width:768px) {
+					font-size: 1.2em;
+				}
+			}
+		}
+		.player {
+			border-bottom: 1px solid #f0f0f0;
+			border-right: 1px solid #f0f0f0;
+			border-left: 1px solid #f0f0f0;
+			background: #ebf2f7;
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+			padding-left: 5px;
+			padding-right: 5px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			.play {
+				height: 40px;
+				background:	#e9e9e9;
+				border: 1px solid rgba(220, 220, 220, 82);
+				border-radius: 15px;
+				position: relative;
+				.border {
+					position: absolute;
+					top: 0;
+					left: 50px;
+					height: 100%;
+					width: 2px;
+					background: rgba(0,0,0,.2);
+				}
+			}
+		}
+		.main_inf {
+			border-right: 1px solid #f0f0f0;
+			border-left: 1px solid #f0f0f0;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			.name-rad:before {
+				content: '';
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				background: url(../img/radio-control.png) no-repeat center center;
+				background-size: cover;
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+			.stream:before {
+				content: '';
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				background: url(../img/musical-note-with-song-name-lines.png) no-repeat center center;
+				background-size: cover;
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+			.type:before {
+				content: '';
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				background: url(../img/sound-bars.png) no-repeat center center;
+				background-size: cover;
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+			.time:before {
+				content: '';
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				background: url(../img/sand-clock-ready-to-start.png) no-repeat center center;
+				background-size: cover;
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+			.bit:before {
+				content: '';
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				background: url(../img/sound-frecuency.png) no-repeat center center;
+				background-size: cover;
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+			.listeners:before {
+				content: '';
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				background: url(../img/teenager-listening-music-with-headphones.png) no-repeat center center;
+				background-size: cover;
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+			.max:before {
+				content: '';
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				background: url(../img/speedometer.png) no-repeat center center;
+				background-size: cover;
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+			.genre:before {
+				content: '';
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				background: url(../img/musical-pentagram-lines-with-music-notes.png) no-repeat center center;
+				background-size: cover;
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+			.site:before {
+				content: '';
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				background: url(../img/grid-world.png) no-repeat center center;
+				background-size: cover;
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+			p {
+				color: #17466f;
+				@media(min-width:0px) and (max-width:320px) {
+					font-size: 	.7em;
+				}
+				@media(min-width:321px) and (max-width:480px) {
+					font-size: 	.8em;
+				}
+			}
+		}
+	}
+	.discript {
+		padding: 15px 0;
+		background: #f3f7f9;
+		overflow: hidden;
+		width: 100%;
+		margin-bottom: 	60px;
+		margin-top: 45px;
+	}
+}
+footer {
+	margin-top: 15px;
+	p {
+		.med;
+		color: #fff;
+		a {
+			.med;
+			color: #81b6e5;
+			&:hover {
+				color: #fff; 
+			}
+		}
+	}
+	.nav {
+		li {
+			color: #fff;
+			.med;
+			font-size: 1em;
+		}
+	}
+	.soc {
+		a {
+			.med;
+			color: #81b6e5;
+			&:hover {
+				color: #fff;
+			}
+			&:before {
+				content: '';
+				display: inline-block;
+				background: url(../img/vk-ico.png) no-repeat center center;
+				background-size: cover;
+				width: 24px;
+				height: 24px;
+				vertical-align: middle;
+				margin-right: 5px;
+				margin-bottom: 5px;
+			}
+			&:hover::before {
+				content: '';
+				display: inline-block;
+				background: url(../img/vk-ico-hov.png) no-repeat center center;
+				background-size: cover;
+				width: 24px;
+				height: 24px;
+				vertical-align: middle;
+				margin-right: 5px;
+				margin-bottom: 5px;
+			}
+		}
+	}
+}
+/*==================АДАПТИВ===================*/
+@media(min-width:0px) and (max-width:320px) {}
+@media(min-width:321px) and (max-width:480px) {}
+@media(min-width:481px) and (max-width:768px) {}
+@media(min-width:769px) and (max-width:992px) {}
+@media(min-width:993px) and (max-width:1200px) {}

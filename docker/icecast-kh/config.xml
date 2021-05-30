@@ -1,0 +1,70 @@
+<icecast>
+    <limits>
+        <workers>4</workers>
+        <clients>999999999</clients>
+        <queue-size>10485760</queue-size>
+        <client-timeout>30</client-timeout>
+        <header-timeout>30</header-timeout>
+        <source-timeout>60</source-timeout>
+        <burst-size>131070</burst-size>
+    </limits>
+
+    <authentication>
+        <source-password>source</source-password>
+        <relay-password>source</relay-password>
+        <admin-user>admin</admin-user>
+        <admin-password>admin</admin-password>
+    </authentication>
+
+    <hostname>radio-docker.dline-media.com</hostname>
+    <location>Russia, Moscow</location>
+    <admin>info@dline-media.com</admin>
+
+    <listen-socket>
+        <port>80</port>	
+        <bind-address>0.0.0.0</bind-address>
+    </listen-socket>
+    
+    <!-- <listen-socket>
+        <port>443</port>
+        <ssl>1</ssl>
+        <bind-address>0.0.0.0</bind-address>
+     </listen-socket>
+         -->
+      
+    <fileserve>1</fileserve>
+
+    <paths>
+        <basedir>/etc/icecast-kh</basedir>
+        <pidfile>/var/icecast-kh/icecast.pid</pidfile>
+        <logdir>/var/log/icecast-kh</logdir>
+        <webroot>/var/icecast-kh/web</webroot>
+        <adminroot>/var/icecast-kh/admin</adminroot>
+        <!-- <ssl_certificate>/var/icecast/ssl/radio_dline-media_com.pem</ssl_certificate>  -->
+        <alias source="/" dest="/status.xsl"/>
+	    <alias source="/admin" dest="/admin.html" /> 
+    </paths>
+
+    <logging>
+        <accesslog>access.log</accesslog>
+        <accesslog>
+            <name>access.log</name>
+        </accesslog>
+        <errorlog>error.log</errorlog>
+        <errorlog>
+            <name>error.log</name>
+            <size>100M</size>
+        </errorlog>
+        <loglevel>3</loglevel>
+        <logsize>100M</logsize>
+    </logging>
+
+    <security>
+        <chroot>0</chroot>
+        <changeowner>
+            <user>icecast</user>
+            <group>icecast</group>
+        </changeowner>
+    </security>
+
+</icecast>
